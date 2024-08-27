@@ -17,11 +17,11 @@
         </div>
         <p class="mx-auto text-sm opacity-70">or</p>
         <p class="">Hugh_jass@gmail.com</p> -->
-        <p><b class="pr-2">Email</b> samuel_oak@gmail.com</p>
+        <p><b class="pr-2">Email: </b> sameerjuin@gmail.com</p>
         <p>
-            <b class="pr-2">GitHub</b>
-            <a href=" " target="_blank" class="text-violet-400"
-                >samuel_oak<sup class=""
+            <b class="pr-2">GitHub: </b>
+            <a href="https://github.com/SameerSul" target="_blank" class="text-violet-400"
+                >SameerSul<sup class=""
                     ><span class="text-xs scale-75 pl-0.5"
                         ><i
                             class="fa-solid fa-arrow-up-right-from-square text-xs scale-[75%]"
@@ -32,8 +32,20 @@
         </p>
         <p>
             <b class="pr-2">LinkedIn</b>
-            <a href=" " target="_blank" class="text-violet-400"
-                >samuel_oak<sup class=""
+            <a href="https://www.linkedin.com/in/sameer-sul/" target="_blank" class="text-violet-400"
+                >Sameer Suleman<sup class=""
+                    ><span class="text-xs scale-75 pl-0.5"
+                        ><i
+                            class="fa-solid fa-arrow-up-right-from-square text-xs scale-[75%]"
+                        /></span
+                    ></sup
+                ></a
+            >
+        </p>
+        <p>
+            <b class="pr-2">Devpost</b>
+            <a href="https://devpost.com/sameerjuin" target="_blank" class="text-violet-400"
+                >Sameer Suleman<sup class=""
                     ><span class="text-xs scale-75 pl-0.5"
                         ><i
                             class="fa-solid fa-arrow-up-right-from-square text-xs scale-[75%]"
