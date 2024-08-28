@@ -54,10 +54,17 @@ onMount(() => {
   return () => clearInterval(interval);
 });
 
-function scrollToProjects() {
-  const projectsSection = document.getElementById('projects');
-  if (projectsSection) {
-    projectsSection.scrollIntoView({ behavior: 'smooth' });
+function scrollToAbout() {
+  const aboutSection = document.getElementById('about');
+  if (aboutSection) {
+    const offset = 50; // Adjust this value as needed
+    const elementPosition = aboutSection.getBoundingClientRect().top;
+    const offsetPosition = elementPosition + window.pageYOffset - offset;
+    
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth'
+    });
   }
 }
 
@@ -93,7 +100,7 @@ $: if (resetAnimation) {
           <div class="absolute top-0 right-full w-full h-full bg-indigo-400 opacity-20 group-hover:translate-x-full z-0 duration-200" />
           
         <button 
-        on:click={scrollToProjects}
+        on:click={scrollToAbout}
         class="blueShadow mx-auto lg:mr-auto lg:ml-0 text-base sm:text-lg md:text-xl poppins relative overflow-hidden px-6 py-3 group rounded-full bg-white text-slate-950"
       >
         <div class="absolute top-0 right-full w-full h-full bg-indigo-400 opacity-20 group-hover:translate-x-full z-0 duration-200" />
@@ -107,48 +114,23 @@ $: if (resetAnimation) {
       </div>
     </section>
 
-      <section class="py-20 lg:py-32 flex flex-col gap-24" id="projects">
-        <div class="flex flex-col gap-2 text-center">
-          <h6 class="text-large sm:text-xl md:text-2xl">
-            A few of my creative endeavors.
-          </h6>
-          <h3 class="font-semibold text-3xl sm:text-4xl md:text-5xl">
-            Curious to <span class="poppins text-indigo-400">see</span> my work?
-          </h3>
-        </div>
-        <a
-          href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-          target="_blank"
-          class="mx-auto px-4 py-2 rounded-md border border-solid border-white flex items-center gap-2 -mb-4 sm:-mb-0 -mt-10 hover:border-indigo-700 duration-200"
-        >
-          <i class="fa-regular fa-circle-play" />
-          <p>Watch the video</p>
-        </a>
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-10">
-          {#each steps as step}
-            <Step {step}>
-              <p>{step.description}</p>
-            </Step>
-          {/each}
-        </div>
-      </section>
-    
-      <section
+    <section
         id="about"
         class="py-20 pt-10 lg:pt-16 lg:py-32 flex flex-col gap-16 sm:gap-20 md:gap-24 relative"
-      ><p class="text-base sm:text-lg md:text-xl">
-        Hey! Welcome to my corner of the internet, I'm a Level III Computer Engineering Student studying at McMaster University, based in Hamilton, Ontario,<span class="text-indigo-400">tech stack</span> includes JavaScript (NEXT.JS or SvelteKit), TailwindCSS, Node.js + Express.js & PostgreSQL or Firebase/Firestore!
-        </p>
+      >
         <!-- <div class="z-[-1] bg-violet-950 w-screen left-1/2 -translate-x-1/2 top-0 h-full absolute">
         </div> -->
         <div
           class="flex flex-col gap-2 text-center relative before:absolute before:top-0 before:left-0 before:w-2/3 before:h-1.5 before:bg-indigo-700 after:absolute after:bottom-0 after:right-0 after:w-2/3 after:h-1.5 after:bg-indigo-700 py-4"
         >
-          <h6 class="text-large sm:text-xl md:text-2xl">Want to know more?</h6>
           <h3 class="font-semibold text-3xl sm:text-4xl md:text-5xl">
             A bit <span class="poppins text-indigo-400">about</span> me.
           </h3>
         </div>
+
+        <p class="text-base sm:text-lg md:text-xl">
+          Hey! Welcome to my corner of the internet, I'm a Level III Computer Engineering Student studying at McMaster University, based in Hamilton, Ontario,<span class="text-indigo-400">tech stack</span> includes JavaScript (NEXT.JS or SvelteKit), TailwindCSS, Node.js + Express.js & PostgreSQL or Firebase/Firestore!
+          </p>
         <p class="mx-auto poppins font-semibold text-lg sm:text-xl md:text-2xl">
           I am . . .
         </p>
@@ -228,6 +210,34 @@ $: if (resetAnimation) {
         </div>
         <p class="mx-auto">So why not invest?</p>
       </section>
+
+      <section class="py-20 lg:py-32 flex flex-col gap-24" id="projects">
+        <div class="flex flex-col gap-2 text-center">
+          <h6 class="text-large sm:text-xl md:text-2xl">
+            A few of my creative endeavors.
+          </h6>
+          <h3 class="font-semibold text-3xl sm:text-4xl md:text-5xl">
+            Curious to <span class="poppins text-indigo-400">see</span> my work?
+          </h3>
+        </div>
+        <a
+          href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+          target="_blank"
+          class="mx-auto px-4 py-2 rounded-md border border-solid border-white flex items-center gap-2 -mb-4 sm:-mb-0 -mt-10 hover:border-indigo-700 duration-200"
+        >
+          <i class="fa-regular fa-circle-play" />
+          <p>Watch the video</p>
+        </a>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-10">
+          {#each steps as step}
+            <Step {step}>
+              <p>{step.description}</p>
+            </Step>
+          {/each}
+        </div>
+      </section>
+    
+
     </main>
     
     <style>
