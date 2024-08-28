@@ -291,26 +291,26 @@ setTimeout(() => {
 /* Custom cursor styles */
 
 .custom-cursor {
-  width: 20px;
-  height: 20px;
-  border: 2px solid white;
-  border-radius: 50%;
-  position: fixed;
-  pointer-events: none;
-  z-index: 9999;
-  transition: all 0.1s ease-out;
-  mix-blend-mode: difference;
-}
+    width: 20px;
+    height: 20px;
+    border: 2px solid white;
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    transition: all 0.1s ease-out;
+    mix-blend-mode: difference;
+  }
+  .custom-cursor.hover {
+    background-color: white;
+    mix-blend-mode: difference;
+  }
 
-.custom-cursor.hover {
-  background-color: white;
-  mix-blend-mode: difference;
-}
+:global(.cursor.hover) {
+    cursor: none !important;
+  }
 
-/* Add this class to all interactive elements */
-.cursor-hover {
-  cursor: none !important;
-}
+
 @keyframes gradient-x {
   0%, 100% {
     background-size: 200% 200%;
