@@ -1,6 +1,9 @@
 <script>
   import Step from "./Step.svelte";
   import { onMount } from 'svelte';
+
+  import ProjectGallery from './ProjectGallery.svelte';
+
   
   let steps = [
 {
@@ -153,8 +156,13 @@ setTimeout(() => {
           <h4 class="relative z-9">There's more to me I promise I'm interesting &darr;</h4>
         </button>
       </div>
-      <div class="relative shadow-2xl grid place-items-center">
+      <!-- <div class="relative shadow-2xl grid place-items-center">
         <img src={"images/profile.png"} alt="Profile" class="object-cover z-[2] max-h-[70vh]" />
+      </div> -->
+
+      <div class="relative shadow-2xl grid place-items-center">
+        <h1>Some things I made I guess, need to change this up later</h1>
+        <ProjectGallery />
       </div>
     </section>
 
