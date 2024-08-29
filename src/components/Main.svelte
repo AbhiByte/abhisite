@@ -3,6 +3,7 @@
   import { onMount } from 'svelte';
 
   import ProjectGallery from './ProjectGallery.svelte';
+  import ExperienceTimeline from './ExperienceTimeline.svelte';
 
   
   let steps = [
@@ -181,84 +182,10 @@ setTimeout(() => {
       <p class="text-base sm:text-lg md:text-xl">
         Hey! Welcome to my corner of the internet, I'm a Level III Computer Engineering Student studying at McMaster University, based in Hamilton, Ontario. I love designing PCB/FPGA models, solving Leetcode problems, or learning more about AI. I've built multiple different projects which you can see on my site here, but to name a few I founded a company that uses Gemini AI and Unity to advance education,  I worked on an AI powered Web App which can turn voice transcripts into educational comics, as well as a 3D indoor LiDAR mapping system on the MSP432E401Y MCU. In my free time though, I love to make all sorts of projects (peep the Devpost), ranging from AI/ML software to embedded hardware systems, because I truly love what I do, you might also find me 3D printing things for fun (I have my own Bambu Lab A1 w/ AMS and wayyyy too much filament for my own good) or reading, check out my goodreads as well, I'm open to book suggestions :D <span class="text-indigo-400"></span> 
       </p>
-      <p class="mx-auto poppins font-semibold text-lg sm:text-xl md:text-2xl">
-        I am . . .
-      </p>
-      <div class="flex flex-col gap-20 w-full mx-auto max-w-[800px]">
-        {#each benefits as benefit, index}
-          <div class="flex gap-6 sm:gap-8">
-            <p class="poppins text-4xl sm:text-5xl md:text-6xl text-slate-500 font-semibold">
-              0{index + 1}
-            </p>
-            <div class="flex flex-col gap-6 sm:gap-8">
-              <h3 class="text-2xl sm:text-3xl md:text-5xl">
-                {benefit.name}
-              </h3>
-              <p>{benefit.description}</p>
-            </div>
-          </div>
-        {/each}
-      </div>
-      <h5 class="text-2xl sm:text-3xl font-semibold text-center poppins">
-        The <span class="text-indigo-400">Complete</span> Package
-      </h5>
-      <div
-        class="flex flex-col overflow-x-scroll gap-10 max-w-[800px] mx-auto w-full"
-      >
-        <table class="bg-white text-slate-700 rounded text-center">
-          <thead class="border-b border-solid border-slate-200">
-            <tr>
-              <th />
-              <th class="whitespace-nowrap p-2 px-4">Candidate #1</th>
-              <th class="whitespace-nowrap p-2 px-4">Candidate #2</th>
-              <th class="whitespace-nowrap p-2 px-4">Candidate #3</th>
-              <th class="bg-indigo-700 text-white whitespace-nowrap p-4 px-8">Me</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="border-b border-solid border-slate-200">
-              <td class="border-r border-solid border-white pl-4 pr-8 py-4 font-semibold text-sm">
-                Dedication
-              </td>
-              <td><i class="fa-solid fa-xmark text-slate-500" /></td>
-              <td><i class="fa-solid fa-check text-slate-500" /></td>
-              <td><i class="fa-solid fa-xmark text-slate-500" /></td>
-              <td><i class="fa-solid fa-check text-green-500" /></td>
-            </tr>
-            <tr class="border-b border-solid border-slate-200">
-              <td class="border-r border-solid border-white pl-4 pr-8 py-4 font-semibold text-sm">
-                Critical Thought
-              </td>
-              <td><i class="fa-solid fa-xmark text-slate-500" /></td>
-              <td><i class="fa-solid fa-check text-slate-500" /></td>
-              <td><i class="fa-solid fa-check text-slate-500" /></td>
-              <td><i class="fa-solid fa-check text-green-500" /></td>
-            </tr>
-            <tr>
-              <td class="border-r border-solid border-white pl-4 pr-8 py-4 font-semibold text-sm">
-                Interpersonal Skills
-              </td>
-              <td><i class="fa-solid fa-check text-slate-500" /></td>
-              <td><i class="fa-solid fa-check text-slate-500" /></td>
-              <td><i class="fa-solid fa-xmark text-slate-500" /></td>
-              <td><i class="fa-solid fa-check text-green-500" /></td>
-            </tr>
-            <tr class="border-t border-solid border-slate-200">
-              <td class="border-r border-solid border-white pl-4 pr-8 py-4 font-semibold text-sm">
-                Programming Ability
-              </td>
-              <td><i class="fa-solid fa-check text-slate-500" /></td>
-              <td><i class="fa-solid fa-xmark text-slate-500" /></td>
-              <td><i class="fa-solid fa-check text-slate-500" /></td>
-              <td><i class="fa-solid fa-check text-green-500" /></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+      
       <div class="mx-auto -mt-12 italic sm:hidden opacity-50">
         <p>Scroll to see more &rarr;</p>
       </div>
-      <p class="mx-auto">So why not invest?</p>
     </section>
 
     <section class="py-20 lg:py-32 flex flex-col gap-24" id="projects">
@@ -271,14 +198,6 @@ setTimeout(() => {
         </h3>
       </div>
       
-      <a
-        href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-        target="_blank"
-        class="mx-auto px-4 py-2 rounded-md border border-solid border-white flex items-center gap-2 -mb-4 sm:-mb-0 -mt-10 hover:border-indigo-700 duration-200"
-      >
-        <i class="fa-regular fa-circle-play" />
-        <p>Watch the video</p>
-      </a>
     
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-10">
         {#each steps as step}
@@ -288,6 +207,8 @@ setTimeout(() => {
         {/each}
       </div>
     </section>
+
+    <ExperienceTimeline />
   </div>
 </main>
   
