@@ -59,15 +59,6 @@
 
 <section class="py-20 lg:py-32 bg-slate-900 text-white">
   <div class="container mx-auto px-4">
-    <div class="mb-16 flex flex-col md:flex-row items-center justify-between">
-
-    </div>
-
-    <h2 class="text-4xl font-bold mb-8 text-center">
-      Curious to <span class="text-indigo-400">see</span> my work?
-    </h2>
-    <p class="text-xl mb-12 text-center">A few of my creative endeavors.</p>
-    
     <div class="mb-8 flex flex-wrap justify-center gap-4">
       {#each allTags as tag}
         <button
