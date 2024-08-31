@@ -8,43 +8,61 @@
       company: "Brainforge AI",
       date: "Jul 2024 - Present",
       description: "Architected and developed an innovative educational game using Unity, integrating Google's Gemini AI model. Led full-stack development efforts, AI code implementation, and Unity game development.",
-      color: "from-purple-500 to-indigo-500"
+      color: "from-purple-500 to-indigo-500",
+      links: {
+        website: "#",
+        github: "#",
+        video: "#"
+      }
     },
     {
       role: "Software Engineering Intern",
       company: "Wewoo",
       date: "May 2024 - Jul 2024",
       description: "Engineered a robust Authorization and Rider Order Service for a Carpooling Application using NestJS. Developed GraphQL resolvers and implemented a real-time notification system using WebSocket API.",
-      color: "from-blue-500 to-cyan-500"
+      color: "from-blue-500 to-cyan-500",
+      links: {
+        website: "#",
+        github: "#",
+        video: "#"
+      }
     },
     {
       role: "Flight Controls Engineer",
       company: "McMaster Rocketry Team",
       date: "Oct 2023 - Present",
       description: "Engineered test functions for NOR Flash memory in Rust, designed Ozys strain gauge measurement PCBs, and collaborated on Deep Q Learning Neural Network models using PyTorch.",
-      color: "from-green-500 to-teal-500"
+      color: "from-green-500 to-teal-500",
+      links: {
+        website: "#",
+        github: "#",
+        video: "#"
+      }
     },
     {
-      role: "Software Engineer Intern",
-      company: "CentML",
-      date: "May 2024 - Present",
-      description: "Platform team, working on model parallelism and latency prediction using PyTorch graphs",
-      color: "from-red-500 to-orange-500"
+      role: "Firmware Specialist",
+      company: "McMaster Interdisciplinary Satellite Team",
+      date: "Aug 2024 - Present",
+      description: "Currently working on FPGA for PRESET Satellite Magnometer",
+      color: "from-yellow-500 to-amber-500",
+      links: {
+        website: "#",
+        github: "#",
+        video: "#"
+      }
     },
     {
-      role: "Software Engineer Intern",
-      company: "Extend",
-      date: "Jan 2024 - Apr 2024",
-      description: "Full stack development for the Core Platform team",
-      color: "from-yellow-500 to-amber-500"
+      role: "Battery Management Software Team Member",
+      company: "Stellantis Battery Workforce Challenge",
+      date: "May 2024 - Aug 2024",
+      description: "Created Simulink models with XS176500 for HVIL systems and implementing state of charge/health monitoring systems for EV Batteries",
+      color: "from-red-500 to-pink-500",
+      links: {
+        website: "#",
+        github: "#",
+        video: "#"
+      }
     },
-    {
-      role: "Software Engineer Intern",
-      company: "Bearworks",
-      date: "May 2023 - Aug 2023",
-      description: "Worked alongside founders to build startup from inception, guiding product development, evaluating different technologies/vendors",
-      color: "from-emerald-500 to-lime-500"
-    }
   ];
 
   let visible = false;
@@ -68,16 +86,23 @@
     {#each experiences as exp, i}
       {#if visible}
         <div 
-          class="bg-slate-800 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+          class="bg-slate-800 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col"
           transition:fly="{{ y: 50, duration: 500, delay: i * 200 }}"
         >
-          <div class="p-6">
-            <div class="flex justify-between items-center mb-4">
+          <div class="p-6 flex-grow">
+            <div class="flex justify-between items-start mb-4">
               <h4 class="text-xl font-semibold">{exp.role}</h4>
-              <span class="text-sm bg-slate-700 rounded-full px-3 py-1">{exp.date}</span>
+              <span class="text-sm bg-slate-700 rounded-full px-3 py-1 whitespace-nowrap ml-2">{exp.date}</span>
             </div>
             <h5 class="text-lg font-medium mb-2 bg-gradient-to-r {exp.color} text-transparent bg-clip-text">{exp.company}</h5>
             <p class="text-gray-300">{exp.description}</p>
+          </div>
+          <div class="p-4 bg-slate-700 mt-auto">
+            <div class="flex justify-end space-x-2">
+              <a href={exp.links.website} class="text-sm bg-gray-600 hover:bg-gray-500 text-white py-1 px-3 rounded transition-colors duration-300">Website</a>
+              <a href={exp.links.github} class="text-sm bg-gray-600 hover:bg-gray-500 text-white py-1 px-3 rounded transition-colors duration-300">GitHub</a>
+              <a href={exp.links.video} class="text-sm bg-gray-600 hover:bg-gray-500 text-white py-1 px-3 rounded transition-colors duration-300">Video</a>
+            </div>
           </div>
           <div class="h-2 bg-gradient-to-r {exp.color}"></div>
         </div>
