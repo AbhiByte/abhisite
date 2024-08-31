@@ -2,9 +2,9 @@
     export let y;
 
     export let tabs = [
-        { name: "Info", link: "#about" },    
+        { name: "Info", link: "#about" },
+        { name: "Experience", link: "#experience" },    
         { name: "Projects", link: "#projects" },
-        { name: "Experience", link: "#experience" },
     ];
 
     function scrollToTop() {

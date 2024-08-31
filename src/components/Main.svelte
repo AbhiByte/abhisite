@@ -53,8 +53,8 @@ onMount(() => {
   cursorHoverElements = document.querySelectorAll('a, button, [role="button"], input, select, textarea, [tabindex]:not([tabindex="-1"])');  
   
   document.addEventListener('mousemove', (e) => {
-    cursor.style.left = e.clientX + 'px';
-    cursor.style.top = e.clientY + 'px';
+    cursor.style.left = `${e.clientX}px`;
+    cursor.style.top = `${e.clientY}px`;
   });
 
   cursorHoverElements.forEach((el) => {
@@ -149,19 +149,21 @@ setTimeout(() => {
 
 
       <div class="flex justify-center md:justify-start space-x-4">
-        <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" class="bg-slate-700 hover:bg-slate-600 text-white rounded-full p-3 transition-colors duration-300">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-        </a>
-        <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" class="bg-slate-700 hover:bg-slate-600 text-white rounded-full p-3 transition-colors duration-300">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-        </a>
-        <a href="mailto:your.email@example.com" class="bg-slate-700 hover:bg-slate-600 text-white rounded-full p-3 transition-colors duration-300">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-        </a>
-      </div>
-      <div class="relative shadow-2xl grid place-items-center">
-        <img src={"images/profile.png"} alt="Profile" class="object-cover z-[2] max-h-[70vh]" />
-      </div>
+        <div class="relative shadow-2xl grid place-items-center">
+          <img src={"images/profile.png"} alt="Profile" class="object-cover z-[2] max-h-[70vh] rounded-lg" />
+        </div>  
+        
+        <div class="flex flex-col justify-center space-y-4 ml-4">
+          <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" class="social-icon bg-slate-700 hover:bg-slate-600 text-white rounded-full p-3 transition-all duration-300 w-12 h-12 flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+          </a>
+          <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" class="social-icon bg-slate-700 hover:bg-slate-600 text-white rounded-full p-3 transition-all duration-300 w-12 h-12 flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+          </a>
+          <a href="mailto:your.email@example.com" class="social-icon bg-slate-700 hover:bg-slate-600 text-white rounded-full p-3 transition-all duration-300 w-12 h-12 flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          </a>
+        </div>
 
       <!-- <div class="relative shadow-2xl grid place-items-center">
         <h1>Some things I made I guess, need to change this up later</h1>
@@ -190,6 +192,9 @@ setTimeout(() => {
       </div>
     </section>
 
+    <ExperienceTimeline />
+
+
     <section class="py-20 lg:py-32 flex flex-col gap-24" id="projects">
       <div class="flex flex-col gap-2 text-center">
         <h6 class="text-large sm:text-xl md:text-2xl">
@@ -202,8 +207,6 @@ setTimeout(() => {
       
       <ProjectGallery {steps} />
     </section>
-
-    <ExperienceTimeline />
   </div>
 </main>
   
@@ -213,7 +216,6 @@ setTimeout(() => {
   cursor: none !important;
 }
 /* Custom cursor styles */
-
 .custom-cursor {
     width: 20px;
     height: 20px;
@@ -226,9 +228,20 @@ setTimeout(() => {
     mix-blend-mode: difference;
   }
   .custom-cursor.hover {
+    transform: scale(1.5);
     background-color: white;
     mix-blend-mode: difference;
   }
+
+  /* Social icon hover animation */
+  .social-icon {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .social-icon:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+
 
 :global(.cursor.hover) {
     cursor: none !important;
