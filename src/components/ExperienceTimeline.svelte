@@ -3,6 +3,23 @@
   import { onMount } from 'svelte';
 
   const experiences = [
+    
+  
+  {
+      role: "Firmware Specialist",
+      company: "McMaster Interdisciplinary Satellite Team",
+      date: "Aug 2024 - Present",
+      description: "Currently working on FPGA for PRESET Satellite Magnometer",
+      color: "from-yellow-500 to-amber-500",
+      links: {
+        website: "#",
+        github: "#",
+        video: "#"
+      }
+    },    
+  
+  
+  
     {
       role: "Founder & Lead Software Engineer",
       company: "Brainforge AI",
@@ -15,6 +32,20 @@
         video: "#"
       }
     },
+
+    {
+      role: "Battery Management Software Team Member",
+      company: "Stellantis Battery Workforce Challenge",
+      date: "May 2024 - Aug 2024",
+      description: "Created Simulink models with XS176500 for HVIL systems and implementing state of charge/health monitoring systems for EV Batteries",
+      color: "from-red-500 to-pink-500",
+      links: {
+        website: "#",
+        github: "#",
+        video: "#"
+      }
+    },
+
     {
       role: "Software Engineering Intern",
       company: "Wewoo",
@@ -39,30 +70,6 @@
         video: "#"
       }
     },
-    {
-      role: "Firmware Specialist",
-      company: "McMaster Interdisciplinary Satellite Team",
-      date: "Aug 2024 - Present",
-      description: "Currently working on FPGA for PRESET Satellite Magnometer",
-      color: "from-yellow-500 to-amber-500",
-      links: {
-        website: "#",
-        github: "#",
-        video: "#"
-      }
-    },
-    {
-      role: "Battery Management Software Team Member",
-      company: "Stellantis Battery Workforce Challenge",
-      date: "May 2024 - Aug 2024",
-      description: "Created Simulink models with XS176500 for HVIL systems and implementing state of charge/health monitoring systems for EV Batteries",
-      color: "from-red-500 to-pink-500",
-      links: {
-        website: "#",
-        github: "#",
-        video: "#"
-      }
-    },
   ];
 
   let visible = false;
@@ -74,11 +81,9 @@
 
 <section class="py-20 lg:py-32 flex flex-col gap-24" id="experience">
   <div class="flex flex-col gap-2 text-center">
-    <h6 class="text-large sm:text-xl md:text-2xl">
-      My professional journey.
-    </h6>
+
     <h3 class="font-semibold text-3xl sm:text-4xl md:text-5xl">
-      Work <span class="poppins text-indigo-400">Experience</span>
+      Work Experience
     </h3>
   </div>
   
