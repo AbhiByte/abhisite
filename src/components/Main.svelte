@@ -4,36 +4,25 @@
 
   import ProjectGallery from './ProjectGallery.svelte';
   import ExperienceTimeline from './ExperienceTimeline.svelte';
+  
 
   
   let steps = [
-{
-  name: "VisuAI",
-  description: "A web based application that receives audio input about a concept and creates an AI Generated comic with a 200 character story to explain it. [should possibly include technologies involved as tags here]",
-},
-{
-  name: "Aspectus",
-  description: "A 2D RPG game created in Unity, utilizing Google Gemini API, it receive course syllabus/transcript and use AI to create personalized, adaptive learning experiences through quests, puzzles, and challenges as you play.",
-},
-{
-  name: "SurroundSense",
-  description: "LiDAR Spatial Mapping System using ToF sensor, utilizing I2C sensor readings are given to a MSP432E401Y MCU, and are then transmitted to Python Open3D via UART for real time visualization",
-},
-];
-
-let benefits = [
-{
-  name: "Self-taught Developer",
-  description: "Mastered coding through online resources, specializing in JavaScript, frameworks, backend, and cloud services.",
-},
-{
-  name: "UX Design Enthusiast",
-  description: "Passionate about crafting intuitive and engaging user experiences through innovative design concepts.",
-},
-{
-  name: "Effective Communicator",
-  description: "Values transparency and constructive dialogue, fostering strong relationships and team productivity.",
-},
+  {
+    name: "VisuAI",
+    description: "A web based application that receives audio input about a concept and creates an AI Generated comic with a 200 character story to explain it.",
+    tags: ["Web", "AI", "Audio Processing", "Comic Generation"]
+  },
+  {
+    name: "Aspectus",
+    description: "A 2D RPG game created in Unity, utilizing Google Gemini API, it receive course syllabus/transcript and use AI to create personalized, adaptive learning experiences through quests, puzzles, and challenges as you play.",
+    tags: ["Game Development", "Unity", "AI", "Education"]
+  },
+  {
+    name: "SurroundSense",
+    description: "LiDAR Spatial Mapping System using ToF sensor, utilizing I2C sensor readings are given to a MSP432E401Y MCU, and are then transmitted to Python Open3D via UART for real time visualization",
+    tags: ["Hardware", "LiDAR", "MCU", "Python", "3D Visualization"]
+  },
 ];
 
 let titles = [
@@ -157,14 +146,27 @@ setTimeout(() => {
           <h4 class="relative z-9">There's more to me I promise I'm interesting &darr;</h4>
         </button>
       </div>
+
+
+      <div class="flex justify-center md:justify-start space-x-4">
+        <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" class="bg-slate-700 hover:bg-slate-600 text-white rounded-full p-3 transition-colors duration-300">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+        </a>
+        <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" class="bg-slate-700 hover:bg-slate-600 text-white rounded-full p-3 transition-colors duration-300">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+        </a>
+        <a href="mailto:your.email@example.com" class="bg-slate-700 hover:bg-slate-600 text-white rounded-full p-3 transition-colors duration-300">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+        </a>
+      </div>
       <!-- <div class="relative shadow-2xl grid place-items-center">
         <img src={"images/profile.png"} alt="Profile" class="object-cover z-[2] max-h-[70vh]" />
       </div> -->
 
-      <div class="relative shadow-2xl grid place-items-center">
+      <!-- <div class="relative shadow-2xl grid place-items-center">
         <h1>Some things I made I guess, need to change this up later</h1>
         <ProjectGallery />
-      </div>
+      </div> -->
     </section>
 
     <section
@@ -198,14 +200,7 @@ setTimeout(() => {
         </h3>
       </div>
       
-    
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-10">
-        {#each steps as step}
-          <Step {step}>
-            <p>{step.description}</p>
-          </Step>
-        {/each}
-      </div>
+      <ProjectGallery {steps} />
     </section>
 
     <ExperienceTimeline />
