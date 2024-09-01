@@ -4,6 +4,9 @@
 
   import ProjectGallery from './ProjectGallery.svelte';
   import ExperienceTimeline from './ExperienceTimeline.svelte';
+  import AboutAndSkills from './AboutAndSkills.svelte';
+
+
   
 
   
@@ -143,7 +146,7 @@ setTimeout(() => {
           class="blueShadow mx-auto lg:mr-auto lg:ml-0 text-base sm:text-lg md:text-xl poppins relative overflow-hidden px-6 py-3 group rounded-full bg-white text-slate-950"
         >
           <div class="absolute top-0 right-full w-full h-full bg-indigo-400 opacity-20 group-hover:translate-x-full z-0 duration-200" />
-          <h4 class="relative z-9">There's more to me I promise I'm interesting &darr;</h4>
+          <h4 class="relative z-9">Check Me Out &darr;</h4>
         </button>
       </div>
 
@@ -178,41 +181,28 @@ setTimeout(() => {
       id="about"
       class="py-20 pt-10 lg:pt-16 lg:py-32 flex flex-col gap-16 sm:gap-20 md:gap-24 relative"
     >
-      <div
-        class="flex flex-col gap-2 text-center relative before:absolute before:top-0 before:left-0 before:w-2/3 before:h-1.5 before:bg-indigo-700 after:absolute after:bottom-0 after:right-0 after:w-2/3 after:h-1.5 after:bg-indigo-700 py-4"
-      >
-        <h3 class="font-semibold text-3xl sm:text-4xl md:text-5xl">
-          A bit <span class="poppins text-indigo-400">about</span> me.
-        </h3>
-      </div>
+    <AboutAndSkills />
 
-      <p class="text-base sm:text-lg md:text-xl">
-        Hey! Welcome to my corner of the internet, I'm a Level III Computer Engineering Student studying at McMaster University, based in Hamilton, Ontario. I love designing PCB/FPGA models, solving Leetcode problems, or learning more about AI. I've built multiple different projects which you can see on my site here, but to name a few I founded a company that uses Gemini AI and Unity to advance education,  I worked on an AI powered Web App which can turn voice transcripts into educational comics, as well as a 3D indoor LiDAR mapping system on the MSP432E401Y MCU. In my free time though, I love to make all sorts of projects (peep the Devpost), ranging from AI/ML software to embedded hardware systems, because I truly love what I do, you might also find me 3D printing things for fun (I have my own Bambu Lab A1 w/ AMS and wayyyy too much filament for my own good) or reading, check out my goodreads as well, I'm open to book suggestions :D [what kind of stuff I work on: include project gallery here i guess or talk about general ideas about what I'm interested in or passionate about]<span class="text-indigo-400"></span> 
-      </p>
-      
-      <div class="mx-auto -mt-12 italic sm:hidden opacity-50">
-        <p>Scroll to see more &rarr;</p>
-      </div>
     </section>
 
     <ExperienceTimeline />
 
 
-    <section class="py-20 lg:py-32 flex flex-col gap-24" id="projects">
+    <section class="py-20 lg:py-32 flex flex-col gap-24" id="projects"></section>
       <ProjectGallery {steps} />
-    </section>
+
   </div>
 </main>
   
-<style>
+<style land="postcss">
 
 :global(html), :global(body) {
   cursor: none !important;
 }
 /* Custom cursor styles */
 .custom-cursor {
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
     border: 2px solid white;
     border-radius: 50%;
     position: fixed;
