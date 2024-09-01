@@ -199,15 +199,6 @@ setTimeout(() => {
 
 
     <section class="py-20 lg:py-32 flex flex-col gap-24" id="projects">
-      <div class="flex flex-col gap-2 text-center">
-        <h6 class="text-large sm:text-xl md:text-2xl">
-          A few of my creative endeavors.
-        </h6>
-        <h3 class="font-semibold text-3xl sm:text-4xl md:text-5xl">
-          Curious to <span class="poppins text-indigo-400">see</span> my work?
-        </h3>
-      </div>
-      
       <ProjectGallery {steps} />
     </section>
   </div>
