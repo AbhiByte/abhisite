@@ -74,7 +74,7 @@
 <section class="py-20 lg:py-32 flex flex-col gap-24" id="experience">
   <div class="flex flex-col gap-2 text-center">
     <h3 class="font-semibold text-3xl sm:text-4xl md:text-5xl">
-      Work Experience
+    Professional Experience
     </h3>
   </div>
   
