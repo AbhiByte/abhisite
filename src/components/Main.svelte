@@ -184,7 +184,6 @@ setTimeout(() => {
     <AboutAndSkills />
 
     </section>
-
     <ExperienceTimeline />
 
 
