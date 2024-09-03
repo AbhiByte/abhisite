@@ -6,7 +6,7 @@ export let projects = [
     name: "VisuAI",
     description: "A web-based application that receives audio input about a concept and creates an AI-generated comic with a 200-character story to explain it. This project made it to the Top 10 at Deltahacks 2024.",
     tags: ["Software", "AI"],
-    image: "C:\\Users\\Sameer\\Desktop\\Final Website\\sameer-portfolio\\static\\images\\visuAIThumbnail.png",
+    image: "/images/visuAIThumbnail.png",
     links: {
       devpost: "https://devpost.com/software/visuai-ip7jz4",
       github: "https://github.com/vaibhav-gopal/deltahacks10Storybook",
@@ -17,7 +17,7 @@ export let projects = [
     name: "Aspectus",
     description: "A 2D RPG game created in Unity, utilizing Google Gemini API to create personalized, adaptive learning experiences through quests, puzzles, and challenges.",
     tags: ["Software", "AI"],
-    image: "C:\\Users\\Sameer\\Desktop\\Final Website\\sameer-portfolio\\static\\images\\aspectusThumbnail.png",
+    image: "/images/aspectusThumbnail.png",
     links: {
       devpost: "https://devpost.com/software/brainforge-ai-pioneering-future-education-w-adaptive-tech",
       github: "https://github.com/BrainForgeAI",
@@ -28,7 +28,7 @@ export let projects = [
     name: "SurroundSense",
     description: "LiDAR Spatial Mapping System using ToF sensor, utilizing I2C sensor readings with an MSP432E401Y MCU, transmitted to Python Open3D via UART for real-time visualization.",
     tags: ["Hardware", "Hybrid"],
-    image: "C:\\Users\\Sameer\\Desktop\\Final Website\\sameer-portfolio\\static\\images\\scanComparison.png",
+    image: "/images/scanComparison.png",
     links: {
       devpost: "https://drive.google.com/file/d/1-tnnsfvPEH4o1Utr4rdNDlYOT58DG-8Y/view?usp=sharing",
       github: "https://github.com/surroundsense",
@@ -39,7 +39,7 @@ export let projects = [
     name: "Noma",
     description: "Using Google Vertex AI and React, Noma identifies key details in images, such as landmarks, and provides them to the Cohere Natural Language Processing API to generate accurate recounts of the user’s journey in a chronological manner.",
     tags: ["Software", "AI"],
-    image: "C:\\Users\\Sameer\\Desktop\\Final Website\\sameer-portfolio\\static\\images\\NomaWebsite.png",
+    image: "/images/NomaWebsite.png",
     links: {
       devpost: "https://devpost.com/software/noma-discover-and-share-your-experience-with-ease",
       github: "https://github.com/nourishnew/travel-buddy",
@@ -50,7 +50,7 @@ export let projects = [
     name: "NorthStar",
     description: "Developed an AI assistant leveraging Google Vertex AI and Gemini to optimize students’ schedules by receiving GCal data and using time management techniques to enhance productivity.",
     tags: ["Software", "AI"],
-    image: "C:\\Users\\Sameer\\Desktop\\Final Website\\sameer-portfolio\\static\\images\\NorthStarTest-Photoroom (1).png",
+    image: "/images/NorthStarTest-Photoroom (1).png",
     links: {
       devpost: "https://devpost.com/software/northstar-1clb86",
       github: "https://github.com/vaibhav-gopal/northstar",
@@ -61,7 +61,7 @@ export let projects = [
     name: "3 Bit Digital-To-Analog Converter",
     description: "Developed a Digital-to-Analog Converter (DAC) aimed at receiving reliable analog output from digital signals, enhancing understanding of electronic system design.",
     tags: ["Hardware"],
-    image: "C:\\Users\\Sameer\\Desktop\\Final Website\\sameer-portfolio\\static\\images\\2Ei4Project5Website.png",
+    image: "/images/2Ei4Project5Website.png",
     links: {
       devpost: "https://drive.google.com/file/d/1ZIJt9F21uh1KzmEv8-aH-9T7eorpKMUl/view?usp=drive_link",
       github: "https://github.com/dac",
@@ -72,7 +72,7 @@ export let projects = [
     name: "MOSFET Based XOR Gate",
     description: "Developed a MOSFET-based XOR Gate using CMOS technology, focusing on frequency control with applications in communication systems.",
     tags: ["Hardware"],
-    image: "C:\\Users\\Sameer\\Desktop\\Final Website\\sameer-portfolio\\static\\images\\2EI4Project4(2)Website.png",
+    image: "/images/2EI4Project4(2)Website.png",
     links: {
       devpost: "https://drive.google.com/file/d/1TDPGne9Zpnw2rhvX_AmB4-t-ADJKPicE/view?usp=sharing",
       github: "https://github.com/xor-gate",
@@ -83,7 +83,7 @@ export let projects = [
     name: "AC-DC Converter",
     description: "Designed an AC to DC converter circuit for power supply systems, gaining experience in optimizing power conversion circuits.",
     tags: ["Hardware"],
-    image: "C:\\Users\\Sameer\\Desktop\\Final Website\\sameer-portfolio\\static\\images\\2EI4Project1Website.png",
+    image: "/images/2EI4Project1Website.png",
     links: {
       devpost: "https://drive.google.com/file/d/1argB_-xUHWn2UaJjAeLUEVMEjMqW7k7k/view?usp=sharing",
       github: "https://github.com/acdc-converter",
@@ -94,7 +94,7 @@ export let projects = [
     name: "Arduino Nano Powered Gameboy",
     description: "Designed a Gameboy prototype, developed Schematic and PCB completely from scratch, and programmed a time and memory efficient game in C++",
     tags: ["Hardware", "Software", "Hybrid"],
-    image: "C:\\Users\\Sameer\\Desktop\\Final Website\\sameer-portfolio\\static\\images\\ArduinoNanoPCB.png",
+    image: "/images/ArduinoNanoPCB.png",
     links: {
       devpost: "https://devpost.com/gameboy",
       github: "https://github.com/gameboy",
@@ -105,7 +105,7 @@ export let projects = [
     name: "Square Wave Generator",
     description: "Engineered a custom Square Wave Generator utilizing a 555 Timer IC, complete with 10K and 100K potentiometers for adjustable frequency control. This project deepened my practical understanding of analog circuit design and signal processing from theoretical coursework.",
     tags: ["Hardware"],
-    image: "C:\\Users\\Sameer\\Desktop\\Final Website\\sameer-portfolio\\static\\images\\SquareWaveGenPCB.png",
+    image: "/images/SquareWaveGenPCB.png",
     links: {
       devpost: "https://devpost.com/square-wave",
       github: "https://github.com/square-wave",
