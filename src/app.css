@@ -6,6 +6,10 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+    cursor: none;
+}
+
 * {
     font-family: 'Roboto', sans-serif;
 }
@@ -43,4 +47,8 @@ h3,
 .img {
     object-position: center;
     object-fit: cover;
+}
+
+body {
+    cursor:none;
 }

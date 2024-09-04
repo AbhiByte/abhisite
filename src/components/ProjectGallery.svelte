@@ -1,7 +1,8 @@
 <script>
   import { fade, fly } from 'svelte/transition';
+  import { onMount } from 'svelte';
 
-export let projects = [
+  export let projects = [
   {
     name: "VisuAI",
     description: "A web-based application that receives audio input about a concept and creates an AI-generated comic with a 200-character story to explain it. This project made it to the Top 10 at Deltahacks 2024.",
@@ -113,6 +114,17 @@ export let projects = [
     }
   }
 ];
+  function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+  }
+
+  onMount(() => {
+    projects = shuffleArray(projects);
+  });
 
   let selectedTags = new Set();
   $: allTags = ["Hardware", "Software", "Hybrid", "AI"];
@@ -144,6 +156,23 @@ export let projects = [
   function handleMouseLeave(event) {
     event.currentTarget.style.transform = "scale(1)";
   }
+
+  function getDocumentationLink(project) {
+    return project.links.devpost || project.links.github || "#";
+  }
+
+  function handleCardClick(project) {
+    if (project.name !== "Square Wave Generator" && project.name !== "Arduino Nano Powered Gameboy") {
+      const link = getDocumentationLink(project);
+      if (link !== "#") {
+        window.open(link, '_blank');
+      }
+    }
+  }
+
+  function isClickable(project) {
+    return project.name !== "Square Wave Generator" && project.name !== "Arduino Nano Powered Gameboy";
+  }
 </script>
 
 <section class="py-20 lg:py-32 bg-slate-900 text-white">
@@ -169,10 +198,11 @@ export let projects = [
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
       {#each filteredProjects as project (project.name)}
         <div
-          class="bg-slate-800 rounded-lg overflow-hidden shadow-lg transition-all duration-300 flex flex-col"
+          class="bg-slate-800 rounded-lg overflow-hidden shadow-lg transition-all duration-300 flex flex-col {isClickable(project) ? 'cursor-pointer' : 'cursor-default'}"
           style="transition: transform 0.3s;"
           on:mouseenter={handleMouseEnter}
           on:mouseleave={handleMouseLeave}
+          on:click={() => handleCardClick(project)}
           in:fly="{{ y: 50, duration: 500 }}"
           out:fade
         >
@@ -188,29 +218,31 @@ export let projects = [
               {/each}
             </div>
             <div class="mt-4 flex gap-2">
-              {#if project.links.devpost}
+              {#if getDocumentationLink(project) !== "#"}
                 <a
-                  href={project.links.devpost}
+                  href={getDocumentationLink(project)}
                   target="_blank"
                   class="bg-indigo-500 text-white px-3 py-1 rounded-full hover:bg-indigo-400 transition"
-                  >Devpost</a
+                  on:click|stopPropagation
                 >
+                  {project.links.devpost && project.links.devpost.includes('devpost') ? 'Devpost' : 'Documentation'}
+                </a>
               {/if}
               {#if project.links.github}
                 <a
                   href={project.links.github}
                   target="_blank"
                   class="bg-gray-700 text-white px-3 py-1 rounded-full hover:bg-gray-600 transition"
-                  >GitHub</a
-                >
+                  on:click|stopPropagation
+                >GitHub</a>
               {/if}
               {#if project.links.video}
                 <a
                   href={project.links.video}
                   target="_blank"
                   class="bg-red-500 text-white px-3 py-1 rounded-full hover:bg-red-400 transition"
-                  >Video</a
-                >
+                  on:click|stopPropagation
+                >Video</a>
               {/if}
             </div>
           </div>
