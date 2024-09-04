@@ -6,105 +6,97 @@
   import ExperienceTimeline from './ExperienceTimeline.svelte';
   import AboutAndSkills from './AboutAndSkills.svelte';
 
-
-  
-
-  
   let steps = [
-  {
-    name: "VisuAI",
-    description: "A web based application that receives audio input about a concept and creates an AI Generated comic with a 200 character story to explain it.",
-    tags: ["Web", "AI", "Audio Processing", "Comic Generation"]
-  },
-  {
-    name: "Aspectus",
-    description: "A 2D RPG game created in Unity, utilizing Google Gemini API, it receive course syllabus/transcript and use AI to create personalized, adaptive learning experiences through quests, puzzles, and challenges as you play.",
-    tags: ["Game Development", "Unity", "AI", "Education"]
-  },
-  {
-    name: "SurroundSense",
-    description: "LiDAR Spatial Mapping System using ToF sensor, utilizing I2C sensor readings are given to a MSP432E401Y MCU, and are then transmitted to Python Open3D via UART for real time visualization",
-    tags: ["Hardware", "LiDAR", "MCU", "Python", "3D Visualization"]
-  },
-];
+    {
+      name: "VisuAI",
+      description: "A web-based application that receives audio input about a concept and creates an AI Generated comic with a 200-character story to explain it.",
+      tags: ["Web", "AI", "Audio Processing", "Comic Generation"]
+    },
+    {
+      name: "Aspectus",
+      description: "A 2D RPG game created in Unity, utilizing Google Gemini API. It receives course syllabus/transcript and uses AI to create personalized, adaptive learning experiences through quests, puzzles, and challenges as you play.",
+      tags: ["Game Development", "Unity", "AI", "Education"]
+    },
+    {
+      name: "SurroundSense",
+      description: "LiDAR Spatial Mapping System using ToF sensor. Utilizing I2C sensor readings are given to an MSP432E401Y MCU and are then transmitted to Python Open3D via UART for real-time visualization.",
+      tags: ["Hardware", "LiDAR", "MCU", "Python", "3D Visualization"]
+    },
+  ];
 
-let titles = [
-"Huge Space Enthusiast",
-"Hackathon Enjoyer",
-"Full Stack Developer",
-"Embedded Programmer"
-];
+  let titles = [
+    "Huge Space Enthusiast",
+    "Hackathon Enjoyer",
+    "Full Stack Developer",
+    "Embedded Programmer"
+  ];
 
-let currentTitleIndex = 0;
-let currentTitle = titles[currentTitleIndex];
-let resetAnimation = false;
-let gradientElement;
+  let currentTitleIndex = 0;
+  let currentTitle = titles[currentTitleIndex];
+  let resetAnimation = false;
+  let gradientElement;
 
-let pageLoaded = false;
-let showFullContent = false;
-
-// Cursor Visuals
-
-let cursor;
-let cursorHoverElements;
-
-onMount(() => {
+  let pageLoaded = false;
+  let showFullContent = false;
 
   // Cursor Visuals
+  let cursor;
+  let cursorHoverElements;
 
-  cursor = document.querySelector('.custom-cursor');
-  cursorHoverElements = document.querySelectorAll('a, button, [role="button"], input, select, textarea, [tabindex]:not([tabindex="-1"])');  
-  
-  document.addEventListener('mousemove', (e) => {
-    cursor.style.left = `${e.clientX}px`;
-    cursor.style.top = `${e.clientY}px`;
+  onMount(() => {
+    // Cursor Visuals
+    cursor = document.querySelector('.custom-cursor');
+    cursorHoverElements = document.querySelectorAll('a, button, [role="button"], input, select, textarea, [tabindex]:not([tabindex="-1"])');  
+    
+    document.addEventListener('mousemove', (e) => {
+      cursor.style.left = `${e.clientX}px`;
+      cursor.style.top = `${e.clientY}px`;
+    });
+
+    cursorHoverElements.forEach((el) => {
+      el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
+      el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
+      el.classList.add('cursor-hover');
+    });
+
+    const interval = setInterval(() => {
+      currentTitleIndex = (currentTitleIndex + 1) % titles.length;
+      currentTitle = titles[currentTitleIndex];
+      resetAnimation = true;
+    }, 1750); // Change title duration
+
+    setTimeout(() => {
+      pageLoaded = true;
+      setTimeout(() => {
+        showFullContent = true;
+      }, 1750); // Delay before showing full content
+    }, 1000); // Delay before starting the transition
+
+    return () => clearInterval(interval);
   });
 
-  cursorHoverElements.forEach((el) => {
-    el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
-    el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
-    el.classList.add('cursor-hover');
-  });
+  function scrollToAbout() {
+    const aboutSection = document.getElementById('about');
+    if (aboutSection) {
+      const offset = 100; 
+      const elementPosition = aboutSection.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+      
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  }
 
-
-  const interval = setInterval(() => {
-  currentTitleIndex = (currentTitleIndex + 1) % titles.length;
-  currentTitle = titles[currentTitleIndex];
-  resetAnimation = true;
-}, 1750); // Change title duration
-
-setTimeout(() => {
-  pageLoaded = true;
-  setTimeout(() => {
-    showFullContent = true;
-  }, 1750); // Delay before showing full content
-}, 1000); // Delay before starting the transition
-
-return () => clearInterval(interval);
-});
-
-function scrollToAbout() {
-const aboutSection = document.getElementById('about');
-if (aboutSection) {
-  const offset = 100; 
-  const elementPosition = aboutSection.getBoundingClientRect().top;
-  const offsetPosition = elementPosition + window.pageYOffset - offset;
-  
-  window.scrollTo({
-    top: offsetPosition,
-    behavior: 'smooth'
-  });
-}
-}
-
-$: if (resetAnimation) {
-resetAnimation = false;
-setTimeout(() => {
-  resetAnimation = true;
-}, 10);
-}
+  $: if (resetAnimation) {
+    resetAnimation = false;
+    setTimeout(() => {
+      resetAnimation = true;
+    }, 10);
+  }
 </script>
-  
+
 <main class="relative flex flex-col flex-1 p-4">
   <div class="custom-cursor"></div>
   {#if !showFullContent}
@@ -150,7 +142,6 @@ setTimeout(() => {
         </button>
       </div>
 
-
       <div class="flex justify-center md:justify-start space-x-4">
         <div class="relative shadow-2xl grid place-items-center">
           <img src={"images/profile.png"} alt="Profile" size = "w-96" imgClass="h-96" class="object-cover z-[2] max-h-[70vh] rounded-full"   />
@@ -166,104 +157,77 @@ setTimeout(() => {
           <a href="https://devpost.com/sameerjuin" target="_blank" rel="noopener noreferrer" class="social-icon bg-slate-700 hover:bg-slate-600 text-white rounded-full p-3 transition-all duration-300 w-12 h-12 flex items-center justify-center">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
           </a>
-          <a href="mailto:sameersul03@gmail.com" class="social-icon bg-slate-700 hover:bg-slate-600 text-white rounded-full p-3 transition-all duration-300 w-12 h-12 flex items-center justify-center">
+          <a href="mailto:sameerjuin@gmail.com" class="social-icon bg-slate-700 hover:bg-slate-600 text-white rounded-full p-3 transition-all duration-300 w-12 h-12 flex items-center justify-center">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
           </a>
+        
         </div>
-
-      <!-- <div class="relative shadow-2xl grid place-items-center">
-        <h1>Some things I made I guess, need to change this up later</h1>
-        <ProjectGallery />
-      </div> -->
+      </div>
     </section>
 
-    <section
-      id="about"
-      class="py-20 pt-10 lg:pt-16 lg:py-32 flex flex-col gap-16 sm:gap-20 md:gap-24 relative"
-    >
-    <AboutAndSkills />
-
+    <section id="about" class="py-8 sm:py-14">
+      <AboutAndSkills />
     </section>
-    <ExperienceTimeline />
 
+    <section class="py-8 sm:py-14">
+      <ExperienceTimeline />
+    </section>
 
-    <section class="py-20 lg:py-32 flex flex-col gap-24" id="projects"></section>
-      <ProjectGallery {steps} />
-
+    <section class="py-8 sm:py-14">
+      <ProjectGallery steps={steps}/>
+    </section>
   </div>
 </main>
-  
-<style land="postcss">
 
-:global(html), :global(body) {
-  cursor: none !important;
-}
-/* Custom cursor styles */
-.custom-cursor {
-    width: 40px;
-    height: 40px;
-    border: 2px solid white;
-    border-radius: 50%;
+<style>
+  .animate-gradient-x {
+    background-size: 400%;
+    animation: gradient-x 7s ease infinite;
+  }
+
+  @keyframes gradient-x {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  :global(body) {
+    cursor: none;
+  }
+
+  .custom-cursor {
     position: fixed;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
     pointer-events: none;
     z-index: 9999;
-    transition: all 0.1s ease-out;
-    mix-blend-mode: difference;
+    transform: translate(-50%, -50%);
+    transition: width 0.2s, height 0.2s;
   }
+
   .custom-cursor.hover {
-    transform: scale(1.5);
-    background-color: white;
-    mix-blend-mode: difference;
+    width: 30px;
+    height: 30px;
   }
 
-  /* Social icon hover animation */
-  .social-icon {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  .cursor-hover {
+    cursor: none;
   }
-  .social-icon:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  #about:before {
+    content: "";
+    display: block;
+    height: 100px; /* height of fixed header */
+    margin-top: -100px; /* negative height of fixed header */
+    visibility: hidden;
   }
-:global(.cursor.hover) {
-    cursor: none !important;
-  }
-
-
-@keyframes gradient-x {
-  0%, 100% {
-    background-size: 200% 200%;
-    background-position: left center;
-  }
-  50% {
-    background-size: 200% 200%;
-    background-position: right center;
-  }
-}
-
-.animate-gradient-x {
-  animation: gradient-x 15s ease infinite;
-}
-
-:global(body) {
-  overflow-x: hidden;
-}
-
-.fixed {
-  position: fixed;
-}
-
-.inset-0 {
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-
-.blur-sm {
-  filter: blur(4px);
-}
-
-.blur-none {
-  filter: blur(0);
-}
 </style>

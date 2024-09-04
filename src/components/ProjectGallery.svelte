@@ -175,7 +175,7 @@
   }
 </script>
 
-<section class="py-20 lg:py-32 bg-slate-900 text-white">
+<section id ="projects" class="py-20 lg:py-32 bg-slate-900 text-white">
   <div class="container mx-auto px-4">
     <h2 class="text-4xl font-bold mb-8 text-center">Projects</h2>
     <div class="mb-8 flex flex-wrap justify-center gap-4">
