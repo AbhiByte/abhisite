@@ -39,6 +39,20 @@
       },
       images: ["/path/to/stellantis_image1.jpg", "/path/to/stellantis_image2.jpg", "/path/to/stellantis_image3.jpg"]
     },
+
+    {
+      role: "Electrical Lab Lead",
+      company: "McMaster Engineering Outreach",
+      date: "May 2024 - Jul 2024",
+      description: "Led the design of three PCB projects for ESP32 and Arduino microcontrollers at Venture Academy. Conducted electrical simulations, created prototypes, and designed PCBs for innovative projects like an Arduino Nano Gameboy and an Autonomous Rover. Directed soldering labs, providing hands-on experience in electronic prototyping.",
+      color: "from-red-500 to-orange-500",
+      links: {
+        website: "https://www.eng.mcmaster.ca/community/about-us/",
+      },
+      images: ["/path/to/stellantis_image1.jpg", "/path/to/stellantis_image2.jpg", "/path/to/stellantis_image3.jpg"]
+    },
+
+
     {
       role: "Flight Controls Engineer",
       company: "McMaster Rocketry Team",

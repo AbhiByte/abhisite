@@ -29,13 +29,13 @@
 <header
     class={"sticky z-[10] top-0 duration-200 px-6 flex items-center justify-between border-b border-solid " +
         (y > 0
-            ? " py-4 bg-slate-950 border-violet-950"
-            : " py-6 bg-transparent border-transparent")}
+            ? "py-4 bg-slate-950 border-violet-950 text-lg"
+            : "py-8 bg-transparent border-transparent text-2xl")}
 >
     <h1 class="font-medium cursor-pointer" on:click={scrollToTop}>
-        <b class="font-bold poppins">Sameer Suleman</b> <span class=""></span>
+        <b class="font-bold poppins">Sameer Suleman</b>
     </h1>
-    <div class="sm:flex items-center gap-4 hidden">
+    <div class="sm:flex items-center gap-6 hidden">
         {#each tabs as tab, index}
             <a
                 href={tab.link}
@@ -49,7 +49,7 @@
 </header>
 
 <style>
-  /* Ensure consistency with Main.svelte */
+  /* Maintain cursor style consistency */
   :global(html), :global(body) {
     cursor: none !important;
   }
@@ -58,12 +58,25 @@
     cursor: none !important;
   }
 
-  /* Add hover effect for header items */
+  /* Hover effect for header items */
   a, button, h1 {
     transition: transform 0.2s ease-in-out;
   }
 
   a:hover, button:hover, h1:hover {
     transform: translateY(-2px);
+  }
+
+  /* Scaling the header size based on scroll */
+  header {
+    transition: all 0.3s ease-in-out;
+  }
+
+  header.py-8 {
+    font-size: 1.5rem; /* Larger header for when y = 0 */
+  }
+
+  header.py-4 {
+    font-size: 1rem; /* Smaller header for scrolling state */
   }
 </style>
