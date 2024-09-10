@@ -39,8 +39,8 @@
             >
                 <h4>See My Projects &darr;</h4>
             </button>
-            <a href="https://drive.google.com/file/d/1eTRYaBqZQtxdGoyJa8q8Qhc7skTK4w47/view?usp=sharing" target="_blank" class="button-effect">
-                <h4>View My Resume</h4>
+            <a href="https://drive.google.com/drive/folders/1c5UVoXO0UxRK_HjOIvRIKYoAXi02ZdaG?usp=sharing" target="_blank" class="button-effect">
+                <h4>View My Resume(s)</h4>
             </a>
         </div>
     </div>
