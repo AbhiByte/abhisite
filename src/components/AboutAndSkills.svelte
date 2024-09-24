@@ -20,7 +20,7 @@
     }
 </script>
 
-<div class="grid grid-cols-2 gap-16"> <!-- Changed to grid layout with a gap -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16"> <!-- Responsive grid layout -->
     <div class="mb-8">
         <h2 class="text-5xl font-bold text-white mb-8">About Me</h2>
         <p class="text-2xl text-gray-300 leading-relaxed">
@@ -32,7 +32,7 @@
             designing models for my 3D printer, or working on something exciting for a Hackathon. And if I'm not doing any of that, I'm probably at the gym or enjoying a good book :D
         </p>
         <br>
-        <div class="flex gap-4">
+        <div class="flex flex-col md:flex-row gap-4">
             <button 
                 on:click={scrollToProjects}
                 class="button-effect"
@@ -77,6 +77,7 @@
         text-decoration: none;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         transition: all 0.3s ease;
+        width: 100%; /* Ensure buttons take full width on small screens */
     }
 
     .button-effect h4 {
@@ -113,13 +114,24 @@
         display: inline-block;
         margin-left: 10px; /* Adjust the value to align icons properly */
     }
+
     h2 {
         font-size: 3rem; /* Increase section header size */
     }
+
     p {
         font-size: 1.5rem; /* Increase paragraph text size */
     }
+
     button, a {
         font-size: 1.25rem; /* Increase button text size */
+    }
+
+    /* Media query for small screens */
+    @media (max-width: 768px) {
+        .button-effect {
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+        }
     }
 </style>

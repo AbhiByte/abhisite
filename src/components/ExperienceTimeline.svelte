@@ -7,7 +7,7 @@
       role: "Firmware Specialist",
       company: "McMaster Interdisciplinary Satellite Team",
       date: "Aug 2024 - Present",
-      description: "Currently working on FPGA for PRESET Satellite Magnometer",
+      description: "Developing FPGA-based systems for PRESET satellite's magnetometer, utilizing AMD Vivado to design custom IP core and Vitis for hardware-software co-simulation, programming FPGA using C.",
       color: "from-yellow-500 to-amber-500",
       links: {
         website: "https://mcmasterneudose.ca/",
