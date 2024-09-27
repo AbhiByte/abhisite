@@ -599,7 +599,7 @@ var init__2 = __esm({
   ".svelte-kit/output/server/nodes/1.js"() {
     index2 = 1;
     component2 = async () => component_cache2 ??= (await Promise.resolve().then(() => (init_error_svelte(), error_svelte_exports))).default;
-    imports2 = ["_app/immutable/nodes/1.ed1ed0dc.js", "_app/immutable/chunks/scheduler.b06e23f4.js", "_app/immutable/chunks/index.ced56889.js", "_app/immutable/chunks/singletons.49cfd95d.js"];
+    imports2 = ["_app/immutable/nodes/1.82360fdc.js", "_app/immutable/chunks/scheduler.b06e23f4.js", "_app/immutable/chunks/index.ced56889.js", "_app/immutable/chunks/singletons.66f38886.js"];
     stylesheets2 = [];
     fonts2 = [];
   }
@@ -804,7 +804,7 @@ var init_page_svelte = __esm({
       let steps = [
         {
           name: "Real-time Multitasking Operating System",
-          description: "Engineered a lightweight soft Real-time operating system (RTOS) for the ARM Cortex-M4 architecture using C. Accessed and manipulated the MSP and PSP stacks, and developed a system call framework and context switcher. Engineered thread structs, multithreading capabilities, and pre-emptive/co-operative multitasking",
+          description: "Engineered a lightweight real-time operating system (RTOS) for the ARM Cortex-M4 architecture using C. Accessed and manipulated the MSP and PSP stacks, and developed a system call framework and context switcher. Engineered thread structs, multithreading capabilities, and pre-emptive/co-operative multitasking",
           tags: ["Web", "AI", "Audio Processing", "Comic Generation"]
         },
         {
@@ -862,7 +862,7 @@ var init__3 = __esm({
   ".svelte-kit/output/server/nodes/2.js"() {
     index3 = 2;
     component3 = async () => component_cache3 ??= (await Promise.resolve().then(() => (init_page_svelte(), page_svelte_exports))).default;
-    imports3 = ["_app/immutable/nodes/2.a2066bd9.js", "_app/immutable/chunks/scheduler.b06e23f4.js", "_app/immutable/chunks/index.ced56889.js", "_app/immutable/chunks/each.3bcb18cb.js"];
+    imports3 = ["_app/immutable/nodes/2.6eb64557.js", "_app/immutable/chunks/scheduler.b06e23f4.js", "_app/immutable/chunks/index.ced56889.js", "_app/immutable/chunks/each.3bcb18cb.js"];
     stylesheets3 = ["_app/immutable/assets/2.220eb55f.css"];
     fonts3 = [];
   }
@@ -1044,7 +1044,7 @@ var options = {
 		<div class="error">
 			<span class="status">` + status + '</span>\n			<div class="message">\n				<h1>' + message + "</h1>\n			</div>\n		</div>\n	</body>\n</html>\n"
   },
-  version_hash: "tm4zd"
+  version_hash: "18inyj4"
 };
 function get_hooks() {
   return {};
@@ -4544,7 +4544,7 @@ var manifest = (() => {
     assets: /* @__PURE__ */ new Set(["assets/particles.json", "favicon.png", "images/2EI4Project1Website.png", "images/2EI4Project4(2)Website.png", "images/2EI4Project4.png", "images/2EI4Project5.png", "images/2Ei4Project5Website.png", "images/ArduinoNanoPCB.png", "images/NomaWebsite.png", "images/NorthStarTest-Photoroom (1).png", "images/SquareWaveGenPCB.png", "images/aspectusThumbnail.png", "images/desktop.ini", "images/profile.png", "images/profileSm.jpg", "images/scanComparison.png", "images/visuAIThumbnail.png"]),
     mimeTypes: { ".json": "application/json", ".png": "image/png", ".ini": "text/plain", ".jpg": "image/jpeg" },
     _: {
-      client: { "start": "_app/immutable/entry/start.3bcd9115.js", "app": "_app/immutable/entry/app.865fcbfd.js", "imports": ["_app/immutable/entry/start.3bcd9115.js", "_app/immutable/chunks/scheduler.b06e23f4.js", "_app/immutable/chunks/singletons.49cfd95d.js", "_app/immutable/entry/app.865fcbfd.js", "_app/immutable/chunks/scheduler.b06e23f4.js", "_app/immutable/chunks/index.ced56889.js"], "stylesheets": [], "fonts": [] },
+      client: { "start": "_app/immutable/entry/start.38833a36.js", "app": "_app/immutable/entry/app.909894b5.js", "imports": ["_app/immutable/entry/start.38833a36.js", "_app/immutable/chunks/scheduler.b06e23f4.js", "_app/immutable/chunks/singletons.66f38886.js", "_app/immutable/entry/app.909894b5.js", "_app/immutable/chunks/scheduler.b06e23f4.js", "_app/immutable/chunks/index.ced56889.js"], "stylesheets": [], "fonts": [] },
       nodes: [
         __memo(() => Promise.resolve().then(() => (init__(), __exports))),
         __memo(() => Promise.resolve().then(() => (init__2(), __exports2))),

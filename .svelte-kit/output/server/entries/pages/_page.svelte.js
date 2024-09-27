@@ -192,7 +192,7 @@ const Main = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let steps = [
     {
       name: "Real-time Multitasking Operating System",
-      description: "Engineered a lightweight soft Real-time operating system (RTOS) for the ARM Cortex-M4 architecture using C. Accessed and manipulated the MSP and PSP stacks, and developed a system call framework and context switcher. Engineered thread structs, multithreading capabilities, and pre-emptive/co-operative multitasking",
+      description: "Engineered a lightweight real-time operating system (RTOS) for the ARM Cortex-M4 architecture using C. Accessed and manipulated the MSP and PSP stacks, and developed a system call framework and context switcher. Engineered thread structs, multithreading capabilities, and pre-emptive/co-operative multitasking",
       tags: ["Web", "AI", "Audio Processing", "Comic Generation"]
     },
     {
