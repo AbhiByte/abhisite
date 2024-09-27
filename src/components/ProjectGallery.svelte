@@ -4,19 +4,17 @@
 
   export let projects = [
   {
-    name: "VisuAI",
-    description: "A web-based application that receives audio input about a concept and creates an AI-generated comic with a 200-character story to explain it. This project made it to the Top 10 at Deltahacks 2024.",
-    tags: ["Software", "AI"],
+    name: "Real-time Multitasking Operating System",
+    description: "Engineered a lightweight soft Real-time operating system (RTOS) for the ARM Cortex-M4 architecture using C. Accessed and manipulated the MSP and PSP stacks, and developed a system call framework and context switcher. Engineered thread structs, multithreading capabilities, and pre-emptive/co-operative multitasking.",
+    tags: ["Software", "AI", "Operating System"],
     image: "/images/visuAIThumbnail.png",
     links: {
-      devpost: "https://devpost.com/software/visuai-ip7jz4",
-      github: "https://github.com/vaibhav-gopal/deltahacks10Storybook",
-      video: "https://youtu.be/d3m0dhiz1R4"
+      github: "https://github.com/AbhiByte/Embedded-Projects/tree/main/ARM-STM32/RTOS",
     }
   },
   {
-    name: "Aspectus",
-    description: "A 2D RPG game created in Unity, utilizing Google Gemini API to create personalized, adaptive learning experiences through quests, puzzles, and challenges.",
+    name: "Brainforge AI",
+    description: "A 2D RPG game created in Unity, utilizing LLMs to create personalized, adaptive learning experiences through quests, puzzles, and challenges. Winner of Boost Hacks II 2024.",
     tags: ["Software", "AI"],
     image: "/images/aspectusThumbnail.png",
     links: {
@@ -26,91 +24,27 @@
     }
   },
   {
-    name: "SurroundSense",
-    description: "LiDAR Spatial Mapping System using ToF sensor, utilizing I2C sensor readings with an MSP432E401Y MCU, transmitted to Python Open3D via UART for real-time visualization.",
-    tags: ["Hardware", "Hybrid"],
-    image: "/images/scanComparison.png",
-    links: {
-      devpost: "https://drive.google.com/file/d/1-tnnsfvPEH4o1Utr4rdNDlYOT58DG-8Y/view?usp=sharing",
-      github: "https://github.com/surroundsense",
-      video: "https://youtube.com/surroundsense"
-    }
-  },
-  {
-    name: "Noma",
-    description: "Using Google Vertex AI and React, Noma identifies key details in images, such as landmarks, and provides them to the Cohere Natural Language Processing API to generate accurate recounts of the user’s journey in a chronological manner.",
+    name: "yt-auto-timestamps",
+    description: "Chrome extension that automatically generates timestamps using natural language processing for comments that mention something in a video but fail to provide a timestamp.",
     tags: ["Software", "AI"],
-    image: "/images/NomaWebsite.png",
     links: {
-      devpost: "https://devpost.com/software/noma-discover-and-share-your-experience-with-ease",
-      github: "https://github.com/nourishnew/travel-buddy",
-      video: "https://youtu.be/dP2HI1Re5nY"
+      github: "https://github.com/AbhiByte/yt-auto-timestamps"
     }
   },
   {
-    name: "NorthStar",
-    description: "Developed an AI assistant leveraging Google Vertex AI and Gemini to optimize students’ schedules by receiving GCal data and using time management techniques to enhance productivity.",
+    name: "TravelBuddy",
+    description: "AI-powered web app that recommends vacations for you based on your preferences.",
     tags: ["Software", "AI"],
-    image: "/images/NorthStarTest-Photoroom (1).png",
     links: {
-      devpost: "https://devpost.com/software/northstar-1clb86",
-      github: "https://github.com/vaibhav-gopal/northstar",
-      video: "https://youtube.com/northstar"
+      github: "https://github.com/AbhiByte/TravelBuddy"
     }
   },
   {
-    name: "3 Bit Digital-To-Analog Converter",
-    description: "Developed a Digital-to-Analog Converter (DAC) aimed at receiving reliable analog output from digital signals, enhancing understanding of electronic system design.",
-    tags: ["Hardware"],
-    image: "/images/2Ei4Project5Website.png",
+    name: "MusicParty",
+    description: "React Frontend, Django Backend app to play music with your friends.",
+    tags: ["Software"],
     links: {
-      devpost: "https://drive.google.com/file/d/1ZIJt9F21uh1KzmEv8-aH-9T7eorpKMUl/view?usp=drive_link",
-      github: "https://github.com/dac",
-      video: "https://youtube.com/dac"
-    }
-  },
-  {
-    name: "MOSFET Based XOR Gate",
-    description: "Developed a MOSFET-based XOR Gate using CMOS technology, focusing on frequency control with applications in communication systems.",
-    tags: ["Hardware"],
-    image: "/images/2EI4Project4(2)Website.png",
-    links: {
-      devpost: "https://drive.google.com/file/d/1TDPGne9Zpnw2rhvX_AmB4-t-ADJKPicE/view?usp=sharing",
-      github: "https://github.com/xor-gate",
-      video: "https://youtube.com/xor-gate"
-    }
-  },
-  {
-    name: "AC-DC Converter",
-    description: "Designed an AC to DC converter circuit for power supply systems, gaining experience in optimizing power conversion circuits.",
-    tags: ["Hardware"],
-    image: "/images/2EI4Project1Website.png",
-    links: {
-      devpost: "https://drive.google.com/file/d/1argB_-xUHWn2UaJjAeLUEVMEjMqW7k7k/view?usp=sharing",
-      github: "https://github.com/acdc-converter",
-      video: "https://youtube.com/acdc-converter"
-    }
-  },
-  {
-    name: "Arduino Nano Powered Gameboy",
-    description: "Designed a Gameboy prototype, developed Schematic and PCB completely from scratch, and programmed a time and memory efficient game in C++",
-    tags: ["Hardware", "Software", "Hybrid"],
-    image: "/images/ArduinoNanoPCB.png",
-    links: {
-      devpost: "https://devpost.com/gameboy",
-      github: "https://github.com/gameboy",
-      video: "https://youtube.com/gameboy"
-    }
-  },
-  {
-    name: "Square Wave Generator",
-    description: "Engineered a custom Square Wave Generator utilizing a 555 Timer IC, complete with 10K and 100K potentiometers for adjustable frequency control. This project deepened my practical understanding of analog circuit design and signal processing from theoretical coursework.",
-    tags: ["Hardware"],
-    image: "/images/SquareWaveGenPCB.png",
-    links: {
-      devpost: "https://devpost.com/square-wave",
-      github: "https://github.com/square-wave",
-      video: "https://youtube.com/square-wave"
+      github: "https://github.com/AbhiByte/MusicParty"
     }
   }
 ];

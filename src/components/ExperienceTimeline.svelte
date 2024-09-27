@@ -4,14 +4,13 @@
 
   const experiences = [
     {
-      role: "Firmware Specialist",
-      company: "McMaster Interdisciplinary Satellite Team",
-      date: "Aug 2024 - Present",
-      description: "Developing FPGA-based systems for PRESET satellite's magnetometer, utilizing AMD Vivado to design custom IP core and Vitis for hardware-software co-simulation, programming FPGA using C.",
+      role: "Software Engineer Intern",
+      company: "QEYnet Inc.",
+      date: "May 2024 - Aug 2024",
+      description: "Wrote backend code using C# and delivered 10000-line Python module (written entirely by me) to the client. 'Outstanding' performance rating (highest possible rating).",
       color: "from-yellow-500 to-amber-500",
       links: {
-        website: "https://mcmasterneudose.ca/",
-        video: "https://youtu.be/u9TTuiRCXCU"
+        website: "https://qeynet.com/",
       },
       images: ["/path/to/mist_image1.jpg", "/path/to/mist_image2.jpg", "/path/to/mist_image3.jpg"]
     },
@@ -19,7 +18,7 @@
       role: "Founder & Lead Software Engineer",
       company: "Brainforge AI",
       date: "Jul 2024 - Present",
-      description: "Architected and developed an innovative educational game using Unity, integrating Google's Gemini AI model. Led full-stack development efforts, AI code implementation, and Unity game development.",
+      description: "Architected and developed an innovative educational game using Unity, integrating LLMs. Led full-stack development efforts, AI code implementation, and Unity game development.",
       color: "from-purple-500 to-indigo-500",
       links: {
         website: "#",
@@ -29,53 +28,41 @@
       images: ["/path/to/brainforge_image1.jpg", "/path/to/brainforge_image2.jpg", "/path/to/brainforge_image3.jpg"]
     },
     {
-      role: "Battery Management Software Team Member",
-      company: "Stellantis Battery Workforce Challenge",
-      date: "May 2024 - Aug 2024",
-      description: "Created Simulink models with XS176500 for HVIL systems and implementing state of charge/health monitoring systems for EV Batteries",
+      role: "Software Engineer Intern",
+      company: "QEYnet Inc.",
+      date: "Sep 2023 - Dec 2023",
+      description: "Wrote computer vision and GUI code using Python. Refactored some scripts using C and C#. Highest possible performance rating.",
       color: "from-red-500 to-pink-500",
       links: {
-        website: "https://www.eng.mcmaster.ca/news/mcmaster-university-one-of-twelve-teams-competing-in-the-battery-workforce-challenge-hosted-by-the-u-s-department-of-energy-and-stellantis/",
+        website: "https://qeynet.com/"
       },
       images: ["/path/to/stellantis_image1.jpg", "/path/to/stellantis_image2.jpg", "/path/to/stellantis_image3.jpg"]
     },
 
     {
-      role: "Electrical Lab Lead",
-      company: "McMaster Engineering Outreach",
-      date: "May 2024 - Jul 2024",
-      description: "Led the design of three PCB projects for ESP32 and Arduino microcontrollers at Venture Academy. Conducted electrical simulations, created prototypes, and designed PCBs for innovative projects like an Arduino Nano Gameboy and an Autonomous Rover. Directed soldering labs, providing hands-on experience in electronic prototyping.",
+      role: "Software Engineer Intern",
+      company: "BLiNQ Networks",
+      date: "Jan 2023 - Apr 2023",
+      description: "Wrote telecommunications (LTE, 5G) software using JavaScript and Python. Highest possible performance rating.",
       color: "from-red-500 to-orange-500",
       links: {
-        website: "https://www.eng.mcmaster.ca/community/about-us/",
+        website: "https://blinqnetworks.com/",
       },
       images: ["/path/to/stellantis_image1.jpg", "/path/to/stellantis_image2.jpg", "/path/to/stellantis_image3.jpg"]
     },
 
 
     {
-      role: "Flight Controls Engineer",
-      company: "McMaster Rocketry Team",
-      date: "Oct 2023 - Aug 2024",
-      description: "Engineered test functions for NOR Flash memory in Rust, designed Ozys strain gauge measurement PCBs, and collaborated on Deep Q Learning Neural Network models using PyTorch.",
+      role: "Machine Learning Engineer Intern",
+      company: "University of Waterloo",
+      date: "May 2022 - Aug 2022",
+      description: "Wrote ML code for a finacial services product. Highest possible perforance rating.",
       color: "from-green-500 to-teal-500",
       links: {
-        website: "https://www.macrocketry.ca/",
-        video: "https://youtu.be/1NX46mNzCTY?t=3071"
+        website: "https://uwaterloo.ca/",
       },
       images: ["/path/to/rocketry_image1.jpg", "/path/to/rocketry_image2.jpg", "/path/to/rocketry_image3.jpg"]
     },
-    {
-      role: "Software Engineering Intern",
-      company: "Wewoo",
-      date: "May 2024 - Jul 2024",
-      description: "Engineered a robust Authorization and Rider Order Service for a Carpooling Application using NestJS. Developed GraphQL resolvers and implemented a real-time notification system using WebSocket API.",
-      color: "from-blue-500 to-cyan-500",
-      links: {
-        website: "https://www.linkedin.com/company/wewooo/mycompany/",
-      },
-      images: ["/path/to/wewoo_image1.jpg", "/path/to/wewoo_image2.jpg", "/path/to/wewoo_image3.jpg"]
-    }
   ];
 
   let visible = false;

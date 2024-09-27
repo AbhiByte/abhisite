@@ -1,8 +1,8 @@
 <script>
     const skills = [
         { category: 'Programming Languages', items: ['python', 'cpp', 'cs', 'rust', 'javascript', 'matlab'] },
-        { category: 'Libraries', items: ['react', 'svelte', 'nodejs', 'flask', 'graphql', 'pytorch', 'sklearn', 'opencv'] },
-        { category: 'Software', items: ['unity', 'git', 'docker'] }
+        { category: 'Libraries', items: ['flask', 'react', 'ASP.NET', 'pytorch', 'sklearn', 'opencv'] },
+        { category: 'Software', items: ['aws', 'git', 'docker'] }
     ];
 
     function scrollToProjects() {
@@ -24,12 +24,10 @@
     <div class="mb-8">
         <h2 class="text-5xl font-bold text-white mb-8">About Me</h2>
         <p class="text-2xl text-gray-300 leading-relaxed">
-            Hi! I'm Sameer, a 3rd-year Computer Engineering student at McMaster University. 
-            I'm passionate about AI applications and embedded systems, particularly in spacecraft and automotive vehicles.
-            
+            Hi! I'm Abhinav, a 3rd-year Mechatronics Engineering student at the University of Waterloo. 
+            I've written software for many application, from embedded code for motor controllers to full-stack web applications.
             <br><br>
-            When I'm not immersed in schoolwork, you'll likely find me experimenting with new projects, 
-            designing models for my 3D printer, or working on something exciting for a Hackathon. And if I'm not doing any of that, I'm probably at the gym or enjoying a good book :D
+            These days, I'm working on building backend applications that integrate AI models.
         </p>
         <br>
         <div class="flex flex-col md:flex-row gap-4">
@@ -39,7 +37,7 @@
             >
                 <h4>See My Projects &darr;</h4>
             </button>
-            <a href="https://drive.google.com/drive/folders/1c5UVoXO0UxRK_HjOIvRIKYoAXi02ZdaG?usp=sharing" target="_blank" class="button-effect">
+            <a href="https://github.com/AbhiByte" target="_blank" class="button-effect">
                 <h4>View My Resume(s)</h4>
             </a>
         </div>

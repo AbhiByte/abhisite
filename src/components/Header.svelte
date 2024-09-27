@@ -32,7 +32,7 @@
           ? "py-4 bg-slate-950 border-violet-950 text-lg"
           : "py-8 bg-transparent border-transparent text-2xl")}>
   <h1 class="font-medium cursor-pointer" on:click={scrollToTop}>
-      <b class="font-bold poppins">Sameer Suleman</b>
+      <b class="font-bold poppins">Abhinav Ramesh</b>
   </h1>
   <div class="sm:flex items-center gap-6 hidden">
       {#each tabs as tab, index}
