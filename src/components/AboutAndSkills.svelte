@@ -25,9 +25,9 @@
         <h2 class="text-5xl font-bold text-white mb-8">About Me</h2>
         <p class="text-2xl text-gray-300 leading-relaxed">
             Hi! I'm Abhinav, a 3rd-year Mechatronics Engineering student at the University of Waterloo. 
-            I've written software for many application, from embedded code for motor controllers to full-stack web applications.
+            I've written software for many applications, from embedded code for motor controllers to full-stack web applications.
             <br><br>
-            These days, I'm working on building backend applications that integrate AI models.
+            These days, I'm working on building backend applications that integrate AI models and learning Rust.
         </p>
         <br>
         <div class="flex flex-col md:flex-row gap-4">

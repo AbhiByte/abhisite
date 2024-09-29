@@ -599,7 +599,7 @@ var init__2 = __esm({
   ".svelte-kit/output/server/nodes/1.js"() {
     index2 = 1;
     component2 = async () => component_cache2 ??= (await Promise.resolve().then(() => (init_error_svelte(), error_svelte_exports))).default;
-    imports2 = ["_app/immutable/nodes/1.749e71ab.js", "_app/immutable/chunks/scheduler.b06e23f4.js", "_app/immutable/chunks/index.ced56889.js", "_app/immutable/chunks/singletons.9b67c235.js"];
+    imports2 = ["_app/immutable/nodes/1.4ea47f06.js", "_app/immutable/chunks/scheduler.b06e23f4.js", "_app/immutable/chunks/index.ced56889.js", "_app/immutable/chunks/singletons.1fc7e4d0.js"];
     stylesheets2 = [];
     fonts2 = [];
   }
@@ -789,10 +789,10 @@ var init_page_svelte = __esm({
         }
       ];
       $$result.css.add(css$12);
-      return `<div class="grid grid-cols-1 md:grid-cols-2 gap-16"> <div class="mb-8"><h2 class="text-5xl font-bold text-white mb-8 svelte-jdum1t" data-svelte-h="svelte-we5di5">About Me</h2> <p class="text-2xl text-gray-300 leading-relaxed svelte-jdum1t" data-svelte-h="svelte-51mmsv">Hi! I&#39;m Abhinav, a 3rd-year Mechatronics Engineering student at the University of Waterloo. 
-            I&#39;ve written software for many application, from embedded code for motor controllers to full-stack web applications.
+      return `<div class="grid grid-cols-1 md:grid-cols-2 gap-16"> <div class="mb-8"><h2 class="text-5xl font-bold text-white mb-8 svelte-jdum1t" data-svelte-h="svelte-we5di5">About Me</h2> <p class="text-2xl text-gray-300 leading-relaxed svelte-jdum1t" data-svelte-h="svelte-19l7mhp">Hi! I&#39;m Abhinav, a 3rd-year Mechatronics Engineering student at the University of Waterloo. 
+            I&#39;ve written software for many applications, from embedded code for motor controllers to full-stack web applications.
             <br><br>
-            These days, I&#39;m working on building backend applications that integrate AI models.</p> <br> <div class="flex flex-col md:flex-row gap-4"><button class="button-effect svelte-jdum1t" data-svelte-h="svelte-c8rmhx"><h4 class="svelte-jdum1t">See My Projects \u2193</h4></button> <a href="https://github.com/AbhiByte" target="_blank" class="button-effect svelte-jdum1t" data-svelte-h="svelte-ncuuf9"><h4 class="svelte-jdum1t">View My Resume(s)</h4></a></div></div> <div><h2 class="text-5xl font-bold text-white mb-8 svelte-jdum1t" data-svelte-h="svelte-qv40kw">Skills</h2> ${each(skills, (skillCategory) => {
+            These days, I&#39;m working on building backend applications that integrate AI models and learning Rust.</p> <br> <div class="flex flex-col md:flex-row gap-4"><button class="button-effect svelte-jdum1t" data-svelte-h="svelte-c8rmhx"><h4 class="svelte-jdum1t">See My Projects \u2193</h4></button> <a href="https://github.com/AbhiByte" target="_blank" class="button-effect svelte-jdum1t" data-svelte-h="svelte-ncuuf9"><h4 class="svelte-jdum1t">View My Resume(s)</h4></a></div></div> <div><h2 class="text-5xl font-bold text-white mb-8 svelte-jdum1t" data-svelte-h="svelte-qv40kw">Skills</h2> ${each(skills, (skillCategory) => {
         return `<div class="mb-8"><h3 class="text-3xl font-semibold text-blue-400 mb-4">${escape(skillCategory.category)}</h3> <div class="skills-icons svelte-jdum1t"><a href="https://skillicons.dev" class="svelte-jdum1t"><img${add_attribute("src", `https://skillicons.dev/icons?i=${skillCategory.items.join(",")}&theme=light&perline=5`, 0)} alt="${escape(skillCategory.category, true) + " Skills"}"> </a></div> </div>`;
       })}</div> </div>`;
     });
@@ -862,7 +862,7 @@ var init__3 = __esm({
   ".svelte-kit/output/server/nodes/2.js"() {
     index3 = 2;
     component3 = async () => component_cache3 ??= (await Promise.resolve().then(() => (init_page_svelte(), page_svelte_exports))).default;
-    imports3 = ["_app/immutable/nodes/2.6eb64557.js", "_app/immutable/chunks/scheduler.b06e23f4.js", "_app/immutable/chunks/index.ced56889.js", "_app/immutable/chunks/each.3bcb18cb.js"];
+    imports3 = ["_app/immutable/nodes/2.5890589f.js", "_app/immutable/chunks/scheduler.b06e23f4.js", "_app/immutable/chunks/index.ced56889.js", "_app/immutable/chunks/each.3bcb18cb.js"];
     stylesheets3 = ["_app/immutable/assets/2.220eb55f.css"];
     fonts3 = [];
   }
@@ -1044,7 +1044,7 @@ var options = {
 		<div class="error">
 			<span class="status">` + status + '</span>\n			<div class="message">\n				<h1>' + message + "</h1>\n			</div>\n		</div>\n	</body>\n</html>\n"
   },
-  version_hash: "1vrepxs"
+  version_hash: "13gnf03"
 };
 function get_hooks() {
   return {};
@@ -4544,7 +4544,7 @@ var manifest = (() => {
     assets: /* @__PURE__ */ new Set(["assets/particles.json", "favicon.png", "images/2EI4Project1Website.png", "images/2EI4Project4(2)Website.png", "images/2EI4Project4.png", "images/2EI4Project5.png", "images/2Ei4Project5Website.png", "images/ArduinoNanoPCB.png", "images/NomaWebsite.png", "images/NorthStarTest-Photoroom (1).png", "images/SquareWaveGenPCB.png", "images/aspectusThumbnail.png", "images/desktop.ini", "images/profile.png", "images/profileSm.jpg", "images/scanComparison.png", "images/visuAIThumbnail.png"]),
     mimeTypes: { ".json": "application/json", ".png": "image/png", ".ini": "text/plain", ".jpg": "image/jpeg" },
     _: {
-      client: { "start": "_app/immutable/entry/start.63034bc0.js", "app": "_app/immutable/entry/app.6382ce51.js", "imports": ["_app/immutable/entry/start.63034bc0.js", "_app/immutable/chunks/scheduler.b06e23f4.js", "_app/immutable/chunks/singletons.9b67c235.js", "_app/immutable/entry/app.6382ce51.js", "_app/immutable/chunks/scheduler.b06e23f4.js", "_app/immutable/chunks/index.ced56889.js"], "stylesheets": [], "fonts": [] },
+      client: { "start": "_app/immutable/entry/start.c6f01b88.js", "app": "_app/immutable/entry/app.10e58d10.js", "imports": ["_app/immutable/entry/start.c6f01b88.js", "_app/immutable/chunks/scheduler.b06e23f4.js", "_app/immutable/chunks/singletons.1fc7e4d0.js", "_app/immutable/entry/app.10e58d10.js", "_app/immutable/chunks/scheduler.b06e23f4.js", "_app/immutable/chunks/index.ced56889.js"], "stylesheets": [], "fonts": [] },
       nodes: [
         __memo(() => Promise.resolve().then(() => (init__(), __exports))),
         __memo(() => Promise.resolve().then(() => (init__2(), __exports2))),
