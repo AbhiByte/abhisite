@@ -6,6 +6,7 @@
 	],
 	"exclude": [
 		"/_app/*",
+		"/AbhinavRameshResume.pdf",
 		"/assets/particles.json",
 		"/favicon.png",
 		"/images/2EI4Project1Website.png",

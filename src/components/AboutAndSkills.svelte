@@ -37,8 +37,8 @@
             >
                 <h4>See My Projects &darr;</h4>
             </button>
-            <a href="https://github.com/AbhiByte" target="_blank" class="button-effect">
-                <h4>View My Resume(s)</h4>
+            <a href="/AbhinavRameshResume.pdf" target="_blank" rel="noopener noreferrer" class="button-effect">
+                <h4>View My Resume</h4>
             </a>
         </div>
     </div>
